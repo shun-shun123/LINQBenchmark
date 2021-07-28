@@ -27,18 +27,30 @@ namespace LinqBenchmark.Benchmark
         public void ArrayAlloc()
         {
             var query = numbersArray.Where(i => i % 2 == 0);
+            foreach (var i in query)
+            {
+                // Do something
+            }
         }
 
         [Benchmark]
         public void ListAlloc()
         {
             var query = numbersList.Where(i => i % 2 == 0);
+            foreach (var i in query)
+            {
+                // Do something
+            }
         }
 
         [Benchmark]
         public void IEnuerableAlloc()
         {
             var query = numbers.Where(i => i % 2 == 0);
+            foreach (var i in query)
+            {
+                // Do something
+            }
         }
     }
 }
